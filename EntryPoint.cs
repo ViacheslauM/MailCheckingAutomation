@@ -14,7 +14,7 @@ namespace MailLoginAutomation
             IWebDriver driver = new ChromeDriver();
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(130));
 
-            login.LogIn(driver, wait, "csharppractice", "FoundationOfProgramming");
+            login.LogIn(driver, wait, "csharppractice", "FoundationOfProgramming", "https://account.mail.ru/");
             Console.WriteLine(newMailChecker.GetNewMails(wait));
 
         }

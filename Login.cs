@@ -5,9 +5,9 @@ namespace MailLoginAutomation
 {
     class Login
     {
-        public void LogIn(IWebDriver driver, WebDriverWait wait, string name, string pass)
+        public void LogIn(IWebDriver driver, WebDriverWait wait, string name, string pass, string url)
         {
-            driver.Url = "https://account.mail.ru/";
+            driver.Url = url;
 
             IWebElement username = wait.Until(ExpectedConditions.ElementIsVisible(By.Name("username")));
             username.SendKeys(name);
